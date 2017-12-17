@@ -18,7 +18,7 @@ class SignUpFormContainer extends React.Component {
       .then((response) => {
         if (response.data.signUp.errors.length <= 0) {
           this.props.signInDispatcher(response.data.signUp.token);
-          this.props.router.replace('/');
+          this.props.history.push('/');
         } else {
           this.setState({
             errors: response.data.signUp.errors

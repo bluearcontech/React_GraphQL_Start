@@ -1,4 +1,5 @@
 import { connect } from 'react-redux';
+import { withRouter } from 'react-router-dom';
 import { browserHistory } from 'react-router';
 
 import { signOut } from '../actions';
@@ -8,14 +9,14 @@ const mapStateToProps = (state) => ({
   authenticated: state.auth.authenticated
 });
 
-const mapDispatchToProps = (dispatch) => ({
+const mapDispatchToProps = (dispatch, ownProps) => ({
   logout() {
     dispatch(signOut());
-    browserHistory.push('/');
+    ownProps.history.push('/');
   }
 });
 
-export default connect(
+export default withRouter(connect(
   mapStateToProps,
   mapDispatchToProps
-)(Navbar);
+)(Navbar));

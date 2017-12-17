@@ -18,7 +18,7 @@ class SignInFormContainer extends React.Component {
       .then((response) => {
         if (response.data.signIn.errors.length <= 0) {
           this.props.signInDispatcher(response.data.signIn.token);
-          this.props.router.replace('/');
+          this.props.history.push('/');
         } else {
           this.setState({
             errors: response.data.signIn.errors

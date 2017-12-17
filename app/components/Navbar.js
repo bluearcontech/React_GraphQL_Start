@@ -10,12 +10,10 @@ export default (props) => {
   const links = (
     (props.authenticated) ?
       <div>
-        <div className="navbar navbar-default">
-          <Link to="/" className="nav-item nav-link">Home</Link>
-        </div>
-        <div className="nav navbar-nav float-xs-right">
-          <Link to="#" onClick={logout} className="nav-item nav-link">Logout</Link>
-        </div>
+        <ul className="nav navbar-nav">
+          <li><Link to="/" className="nav-item nav-link">Home</Link></li>
+          <li><Link to="#" onClick={logout} className="nav-item nav-link">Logout</Link></li>
+        </ul>
       </div>
       :
       <div>
