@@ -7,6 +7,7 @@ import { ConnectedRouter, routerMiddleware } from 'react-router-redux';
 import { reducer as formReducer } from 'redux-form';
 import reducers from '../reducers'
 
+const token = localStorage.getItem('token');
 const networkInterface = createNetworkInterface({ uri: 'http://localhost:4000/graphql' });
 
 networkInterface.use([{

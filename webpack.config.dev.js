@@ -34,7 +34,7 @@ module.exports = {
                 use: {
                     loader: 'babel-loader',
                     query: {
-                        presets: ['es2015', 'react', 'react-hmre']
+                        presets: ['es2015', 'react', 'stage-0', 'react-hmre']
                     }
                 },
                 include: path.resolve(__dirname, 'app'),
@@ -42,7 +42,7 @@ module.exports = {
             {
                 test: /\.(css|scss)$/,
                 loader: 'style-loader!css-loader',
-            },            
+            },
             {
                 test: /\.html$/,
                 loader: 'html-loader?attrs[]=video:src'
