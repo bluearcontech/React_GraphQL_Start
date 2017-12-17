@@ -1,4 +1,5 @@
 import { combineReducers } from 'redux';
+import authReducer from './authReducer';
 const initialState = null
 
 const reducerAction = (state = initialState, action) => {
@@ -9,7 +10,8 @@ const reducerAction = (state = initialState, action) => {
 }
 
 const reducers = combineReducers({
-	reducerAction
+	reducerAction,
+	authReducer
 })
 
 export default reducers
