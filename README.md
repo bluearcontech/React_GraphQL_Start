@@ -40,5 +40,7 @@ The `app` directory contains all the shared components, routes and reducers.
 
 Do you know how to improve it? Feel free to contribute to this project.
 
+## License
 
+MIT.
 
