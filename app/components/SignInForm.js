@@ -1,6 +1,10 @@
 import React from 'react';
 import { Field, reduxForm } from 'redux-form';
 
+const errorStyle ={
+  color: 'red'
+};
+
 const renderField = ({ input, label, type, meta: { touched, error } }) => {
   const hasError = (touched && error) ? 'has-danger' : '';
   return (
@@ -8,7 +12,7 @@ const renderField = ({ input, label, type, meta: { touched, error } }) => {
       <label>{label}</label>
       <div>
         <input {...input} placeholder={label} type={type} className="form-control" />
-        {touched && error && <div className="form-control-feedback">{error}</div>}
+        {touched && error && <div style={errorStyle}>{error}</div>}
       </div>
     </div>
   );
