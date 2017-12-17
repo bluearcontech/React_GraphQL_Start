@@ -16,7 +16,7 @@
 
 ## Quickstart
 ```
-git clone https://github.com/bluearcontech/react-github-api.git your_app
+git clone https://github.com/bluearcontech/React_GraphQL_Start.git your_app
 cd your_app
 npm install
 npm run start
