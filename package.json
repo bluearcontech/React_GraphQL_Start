@@ -45,6 +45,7 @@
     "react-router-dom": "^4.1.2",
     "react-router-redux": "^5.0.0-alpha.6",
     "redux": "^3.5.2",
+    "redux-form": "^6.3.2",
     "redux-devtools-extension": "^2.13.2",
     "redux-thunk": "^2.2.0",
     "rimraf": "^2.5.4",
