@@ -11,6 +11,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "apollo-client": "^0.5.18",
     "apollo-server": "^0.3.3",
     "babel-cli": "^6.10.1",
     "babel-core": "^6.10.4",
@@ -37,6 +38,7 @@
     "node-sass": "^4.5.3",
     "postcss-loader": "^2.0.6",
     "react": "^15.2.1",
+    "react-apollo": "^0.7.1",
     "react-dom": "^15.2.1",
     "react-redux": "^5.0.5",
     "react-router": "^4.2.0",
@@ -47,10 +49,10 @@
     "redux-thunk": "^2.2.0",
     "rimraf": "^2.5.4",
     "style-loader": "^0.18.2",
+    "validator": "^6.2.0",
     "webpack": "^3.4.1",
     "webpack-dev-middleware": "^1.6.1",
-    "webpack-hot-middleware": "^2.12.2",
-    "validator": "^6.2.0"
+    "webpack-hot-middleware": "^2.12.2"
   },
   "devDependencies": {
     "file-loader": "^0.11.2",
