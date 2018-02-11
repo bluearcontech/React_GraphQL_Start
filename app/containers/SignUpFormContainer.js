@@ -14,7 +14,7 @@ class SignUpFormContainer extends React.Component {
   }
 
   handleSubmit(values) {
-    this.props.signUp(values)
+    this.props.mutate({ variables: values })
       .then((response) => {
         if (response.data.signUp.errors.length <= 0) {
           this.props.signInDispatcher(response.data.signUp.token);
@@ -57,13 +57,7 @@ const signUpMutation = gql`
   }
 `;
 
-const SignUpWithData = graphql(signUpMutation, {
-  props: ({ mutate }) => ({
-    signUp: ({ firstName, lastName, email, password }) => mutate({
-      variables: { firstName, lastName, email, password }
-    }),
-  }),
-})(withRouter(SignUpFormContainer));
+const SignUpWithData = graphql(signUpMutation)(SignUpFormContainer);
 
 const mapDispatchToProps = (dispatch) => ({
   signInDispatcher(token) {
